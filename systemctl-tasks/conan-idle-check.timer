@@ -1,0 +1,10 @@
+[Unit]
+Description=Check Conan Exiles server for idle players
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=5min
+Unit=conan-idle-check.service
+
+[Install]
+WantedBy=timers.target
