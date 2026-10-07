@@ -1,0 +1,9 @@
+[Unit]
+Description=Check Conan Exiles server for idle players
+After=conan.service
+
+[Service]
+Type=oneshot
+User=trajanus
+EnvironmentFile=/etc/conan-shutdown.env
+ExecStart=/usr/bin/python3 /home/trajanus/conan-shutdown/conan_idle.py

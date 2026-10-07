@@ -1,0 +1,15 @@
+[Unit]
+Description=Conan Exiles Dedicated Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=trajanus
+WorkingDirectory=/home/trajanus/Steam/steamapps/common/Conan Exiles Dedicated Server
+ExecStart="/home/trajanus/Steam/steamapps/common/Conan Exiles Dedicated Server/ConanSandboxServer.sh"
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
